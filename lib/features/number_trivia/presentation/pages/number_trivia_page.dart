@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:number_trivia/features/number_trivia/presentation/bloc/number_trivia_cubit.dart';
+import 'package:number_trivia/features/number_trivia/presentation/bloc/number_trivia_state.dart';
 import '../bloc/number_trivia_bloc.dart';
 import '../widgets/loading_widget.dart';
 import '../widgets/message_display.dart';
@@ -22,9 +24,9 @@ class NumberTriviaPage extends StatelessWidget {
   }
 }
 
-BlocProvider<NumberTriviaBloc> buildBody(BuildContext context) {
+BlocProvider<NumberTriviaCubit> buildBody(BuildContext context) {
   return BlocProvider(
-    create: (context) => sl<NumberTriviaBloc>(),
+    create: (context) => sl<NumberTriviaCubit>(),
     child: Center(
       child: Padding(
         padding: EdgeInsets.all(10),
@@ -32,7 +34,7 @@ BlocProvider<NumberTriviaBloc> buildBody(BuildContext context) {
           children: [
             SizedBox(height: 10),
             // Top half
-            BlocBuilder<NumberTriviaBloc, NumberTriviaState>(
+            BlocBuilder<NumberTriviaCubit, NumberTriviaState>(
               builder: (context, state) {
                 if (state is Empty) {
                   return MessageDisplay(
@@ -49,7 +51,7 @@ BlocProvider<NumberTriviaBloc> buildBody(BuildContext context) {
                     message: state.message,
                   );
                 }
-                return null;
+                return SizedBox.shrink();
               },
             ),
             SizedBox(height: 20),

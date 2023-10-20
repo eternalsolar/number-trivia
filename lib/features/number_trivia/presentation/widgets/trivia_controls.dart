@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:number_trivia/features/number_trivia/presentation/bloc/number_trivia_cubit.dart';
 import '../bloc/number_trivia_bloc.dart';
+import '../bloc/number_trivia_event.dart';
 
 class TriviaControls extends StatefulWidget {
   @override
@@ -38,16 +40,14 @@ class _TriviaControlsState extends State<TriviaControls> {
         Row(
           children: <Widget>[
             Expanded(
-              child: RaisedButton(
+              child: ElevatedButton(
                 child: Text('Search'),
-                color: Theme.of(context).accentColor,
-                textTheme: ButtonTextTheme.primary,
                 onPressed: _dispatchConcrete,
               ),
             ),
             SizedBox(width: 10),
             Expanded(
-              child: RaisedButton(
+              child: ElevatedButton(
                 child: Text('Get random trivia'),
                 onPressed: _dispatchRandom,
               ),
@@ -63,8 +63,8 @@ class _TriviaControlsState extends State<TriviaControls> {
   }
 
   void _dispatchConcrete() {
-    BlocProvider.of<NumberTriviaBloc>(context)
-        .add(GetTriviaForConcreteNumber(_controller.text));
+    BlocProvider.of<NumberTriviaCubit>(context)
+        .onGetTriviaForConcreteNumber(_controller.text);
     _clear();
   }
 

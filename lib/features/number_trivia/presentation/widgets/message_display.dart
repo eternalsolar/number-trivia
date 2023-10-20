@@ -4,8 +4,8 @@ class MessageDisplay extends StatelessWidget {
   final String message;
 
   MessageDisplay({
-    Key key,
-    @required this.message,
+    Key key = const Key('message_display_key'),
+    required this.message,
   }) : assert(message != null),
         super(key: key);
 

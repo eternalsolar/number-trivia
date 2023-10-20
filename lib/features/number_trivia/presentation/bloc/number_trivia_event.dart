@@ -1,4 +1,6 @@
-part of 'number_trivia_bloc.dart';
+import 'package:equatable/equatable.dart';
+
+import 'number_trivia_bloc.dart';
 
 abstract class NumberTriviaEvent extends Equatable {
   const NumberTriviaEvent();
@@ -16,3 +18,13 @@ class GetTriviaForConcreteNumber extends NumberTriviaEvent {
 }
 
 class GetTriviaForRandomNumber extends NumberTriviaEvent {}
+class GetTriviaForConcreteNumberCompleted extends NumberTriviaEvent {
+  final int number;
+
+  GetTriviaForConcreteNumberCompleted(this.number);
+
+  @override
+  List<Object> get props => [number];
+}
+
+

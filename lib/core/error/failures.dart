@@ -4,9 +4,9 @@ abstract class Failure extends Equatable {
   // If the subclasses have some properties, they'll get passed to this constructor
   // so that Equatable can perform value comparison.
   //Failure([List properties = const <dynamic>[]]);
-  final List<Object> properties;
+  List<Object> properties;
 
-  Failure([this.properties]);
+  Failure([this.properties = const <Object>[]]);
 
   @override
   List<Object> get props => properties;
