@@ -8,38 +8,6 @@ This is the repository for the flutter app built using clean architecture and te
 
 [Website - Reso Coder](https://resocoder.com/category/tutorials/flutter/tdd-clean-architecture/)
 
-#### Dependencies
-
-- [**BLoC**](https://pub.dev/packages/flutter_bloc), Widgets that make it easy to integrate blocs and cubits into Flutter
-    > flutter_bloc: ^7.0.0
- 
-- [**BLoC Test**](https://pub.dev/packages/bloc_test), A Dart package that makes testing blocs and cubits easy.
-    > bloc_test: ^8.0.0
-  
-- [**Connectivity**](https://pub.dev/packages/connectivity), This plugin allows Flutter apps to discover network connectivity and configure themselves accordingly. It can distinguish between cellular vs WiFi connection.
-    > connectivity: ^3.0.1
-
-- [**Dartz**](https://pub.dev/packages/dartz), Functional programming in Dart
-    > dartz: ^0.9.2
- 
-- [**Data Connection Checker**](https://pub.dev/packages/data_connection_checker), A pure Dart utility library that checks for an internet connection
-    > data_connection_checker: ^0.3.4
- 
-- [**Equatable**](https://pub.dev/packages/equatable), Simplify Equality Comparisons
-    > equatable: ^2.0.0
- 
- - [**Get It**](https://pub.dev/packages/get_it), This is a simple Service Locator for Dart and Flutter projects
-    > get_it: ^6.0.0
- 
- - [**HTTP**](https://pub.dev/packages/http), A composable, Future-based library for making HTTP requests.
-    > http: ^0.13.0
- 
- - [**Mockito**](https://pub.dev/packages/mockito), Mock library for Dart inspired by Mockito.
-    > mockito: ^5.0.0
- 
- - [**Shared preferences plugin**](https://pub.dev/packages/shared_preferences), Wraps platform-specific persistent storage for simple data (NSUserDefaults on iOS and macOS, SharedPreferences on Android, etc.).
-    > shared_preferences: ^2.0.1
-
 ### NUMBERS API [Link](http://numbersapi.com/#42)
 >  *NUMBERS API*, An API for interesting facts about numbers
 
